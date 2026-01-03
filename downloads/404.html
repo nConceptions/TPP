@@ -1,0 +1,81 @@
+<!-- I DONT KNOW WHATS GOING ON HERE -->
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>404 /downloads/ - The Planer Project</title>
+  <link rel="icon" type="image/png" href="/media/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .error-box {
+      background-color: #fff;
+      border: 2px dashed #000;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .error-code {
+      font-size: 48px;
+      font-weight: bold;
+      color: rgb(98, 26, 100);
+    }
+  </style>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/no-js.html">
+  </noscript>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <img src="NEWBanner2.png" alt="The Planer Project">
+  </header>
+
+  <marquee behavior="alternate">
+    ERROR · FILE NOT FOUND · ERROR · FILE NOT FOUND
+  </marquee>
+
+  <main>
+    <div class="error-box">
+      <div class="error-code blink">! Four Zero Four !</div>
+      <p><b>Maybe a Typo?</b></p>
+
+      <p id="random-message">You were searching for a non existent File ! Shame on you.</p>
+
+      <div id="countdown" style="margin-top:10px; font-weight:bold;">
+        Never redirecting... The Code broke ... CTRL + U
+      </div>
+
+      <p style="margin-top:15px;">
+        <a href="/index.html">Return to main page</a> ·
+      </p>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2025 The Planer Project
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+
+    const countdownElement = document.getElementById("countdown");
+
+    let seconds = 25;
+    if (countdownElement) {
+      const interval = setInterval(() => {
+        seconds--;
+        countdownElement.textContent = `Redirecting in ${seconds} seconds...`;
+        if (seconds <= 0) {
+          clearInterval(interval);
+          window.location.href = "/index.html";
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
